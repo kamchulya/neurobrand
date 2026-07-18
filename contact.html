@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — NeuroBrand</title>
+<meta name="description" content="Оставьте заявку на AI-автоматизацию или маркетинговое продвижение.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="noise-bg"></div><div class="grain"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 34L24 8L24 20L42 14L24 40V28L6 34Z" fill="url(#lg)"/>
+        <defs><linearGradient id="lg" x1="6" y1="8" x2="42" y2="40" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#C4B5FD"/><stop offset="1" stop-color="#5B21B6"/>
+        </linearGradient></defs>
+      </svg>
+      <span class="logo-text">NEURO<span>BRAND</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
+      <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
+      <a href="cases.html" data-i18n="nav.cases">Кейсы</a>
+      <a href="about.html" data-i18n="nav.about">О нас</a>
+      <a href="contact.html" class="active" data-i18n="nav.contact">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <button class="burger" id="burgerBtn" aria-label="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <div class="lang-switch" id="langSwitch">
+        <button data-lang="ru" class="active">RU</button>
+        <button data-lang="kz">KZ</button>
+      </div>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
+    <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
+    <a href="cases.html" data-i18n="nav.cases">Кейсы</a>
+    <a href="about.html" data-i18n="nav.about">О нас</a>
+    <a href="contact.html" class="active" data-i18n="nav.contact">Контакты</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:20px;">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span><span data-i18n="contactPage.eyebrow">Заявка</span></div>
+      <h1 data-i18n="contactPage.h1">Расскажите о <em>своей задаче</em></h1>
+      <p class="lead" data-i18n="contactPage.lead">Выберите направление — ответим в ближайшее время и предложим следующий шаг.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:10px;">
+    <div class="wrap" style="max-width:640px;">
+      <div class="form-card">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="ai" id="tabAi" data-i18n="contactPage.tabAi">Хочу AI-бота</button>
+          <button class="tab-btn" data-tab="marketing" id="tabMarketing" data-i18n="contactPage.tabMarketing">Хочу продвижение</button>
+        </div>
+
+        <form id="leadForm">
+          <div class="field">
+            <label data-i18n="contactPage.fieldName">Имя</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="field">
+            <label data-i18n="contactPage.fieldContact">Телефон или мессенджер</label>
+            <input type="text" name="contact" required>
+          </div>
+          <div class="field" id="companyField">
+            <label data-i18n="contactPage.fieldCompany">Сфера бизнеса</label>
+            <input type="text" name="company" placeholder="Например: фитнес-студия, салон красоты…">
+          </div>
+          <div class="field">
+            <label data-i18n="contactPage.fieldMessage">Комментарий</label>
+            <textarea name="message" data-i18n-ph="contactPage.fieldMessagePh" placeholder="Кратко опишите задачу"></textarea>
+          </div>
+          <input type="hidden" name="direction" id="directionInput" value="ai">
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="contactPage.submit">Отправить заявку</button>
+          <p class="form-note" data-i18n="contactPage.note">Заявки пока обрабатываются вручную — подключим автоматическую отправку в CRM/мессенджер на следующем этапе.</p>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+          <h4 data-i18n="contactPage.successTitle">Заявка отправлена</h4>
+          <p data-i18n="contactPage.successText">Спасибо! Это демо-версия формы — при подключении бэкенда заявка автоматически придёт в вашу CRM или мессенджер.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="logo">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+          <path d="M6 34L24 8L24 20L42 14L24 40V28L6 34Z" fill="url(#lg2)"/>
+          <defs><linearGradient id="lg2" x1="6" y1="8" x2="42" y2="40" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#C4B5FD"/><stop offset="1" stop-color="#5B21B6"/>
+          </linearGradient></defs>
+        </svg>
+        <span class="logo-text">NEURO<span>BRAND</span></span>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5 data-i18n="footer.col1">Направления</h5>
+          <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
+          <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.col2">Компания</h5>
+          <a href="cases.html" data-i18n="nav.cases">Кейсы</a>
+          <a href="about.html" data-i18n="nav.about">О нас</a>
+          <a href="contact.html" data-i18n="nav.contact">Контакты</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NeuroBrand</span>
+      <span data-i18n="footer.tag">Strategy · Brand · Impact</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
