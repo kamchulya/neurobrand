@@ -3,101 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuroBrand - Strategy • Brand • Impact</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>NeuroBrand - Strategy, Brand, Impact</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-
     <!-- HEADER -->
     <header>
-        <div class="logo-section">
-            <img src="assets/images/logo.png" alt="NeuroBrand" class="logo-img">
-            <span class="logo-text">NEUROBRAND</span>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="NeuroBrand">
+            <span>NeuroBrand</span>
         </div>
         <nav>
-            <a href="index.html">Главная</a>
-            <a href="services.html">Услуги</a>
-            <a href="cases.html">Кейсы</a>
-            <a href="about.html">О нас</a>
-            <a href="contact.html">Контакты</a>
+            <a href="#services">Услуги</a>
+            <a href="#cases">Кейсы</a>
+            <a href="#about">О нас</a>
+            <a href="#contact">Контакты</a>
         </nav>
     </header>
 
-    <main>
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <div class="hero-content">
-                <div class="logo-3d">
-                    <img src="assets/images/logo.png" alt="NeuroBrand">
-                </div>
-                <h1>
-                    Strategy<br>
-                    <span class="highlight">Brand</span><br>
-                    Impact
-                </h1>
-                <p class="hero-subtitle">
-                    Помогаем онлайн-бизнесу конвертировать больше клиентов через автоматизацию и стратегическое усиление вашего присутствия
-                </p>
-                
-                <div class="hero-cta">
-                    <a href="services.html#ai-services" class="btn btn-primary">AI Автоматизация</a>
-                    <a href="services.html#marketing-services" class="btn btn-secondary">Маркетинг</a>
-                </div>
-            </div>
-        </section>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-logo">
+            <img src="assets/images/logo.png" alt="NeuroBrand">
+        </div>
+        <h1>Автоматизируем продажи<br>вашего бренда</h1>
+        <p class="hero-subtitle">
+            Помогаем онлайн-бизнесу конвертировать больше клиентов через AI, маркетинг и стратегию. Системы, которые работают 24/7.
+        </p>
+        <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Начать консультацию</a>
+            <a href="#services" class="btn btn-secondary">Посмотреть услуги</a>
+        </div>
+    </section>
 
-        <!-- FEATURES SECTION -->
-        <section class="features">
-            <div class="features-container">
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>Работаем 24/7</h3>
-                        <p>Продажи и автоматизация не спят. Наши решения работают в любой момент, даже когда вы спите.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Конкуренты молчат</h3>
-                        <p>Пока ваши конкуренты спят на лаврах, вы уже в следующей лиге. Скорость внедрения — ваше преимущество.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>От незнакомца к доверию</h3>
-                        <p>Каждое взаимодействие построено так, чтобы превратить холодного лида в вашего лучшего клиента.</p>
-                    </div>
-                </div>
+    <!-- FEATURES -->
+    <div class="container">
+        <div class="features">
+            <div class="feature">
+                <h4>Конвертация</h4>
+                <p>Система работает 24/7 и не требует вашего участия. Лиды приходят даже когда вы спите.</p>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Услуги</h4>
-                <ul>
-                    <li><a href="services.html#ai-services">AI Автоматизация</a></li>
-                    <li><a href="services.html#marketing-services">Маркетинг</a></li>
-                    <li><a href="services.html">Все услуги</a></li>
-                </ul>
+            <div class="feature">
+                <h4>Скорость</h4>
+                <p>Первые результаты видно за 2-4 недели. Реальные цифры, не обещания.</p>
             </div>
-            <div class="footer-section">
-                <h4>Компания</h4>
-                <ul>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="cases.html">Кейсы</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Контакты</h4>
-                <ul>
-                    <li><a href="mailto:hello@neurobrand.kz">hello@neurobrand.kz</a></li>
-                    <li><a href="tel:+7">+7 (XXX) XXX-XX-XX</a></li>
-                    <li><a href="#">Астана, Казахстан</a></li>
-                </ul>
+            <div class="feature">
+                <h4>Масштаб</h4>
+                <p>От стартапа до корпорации. Решения адаптируются под ваш бизнес.</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 NeuroBrand. Все права защищены. | Strategy • Brand • Impact</p>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Что мы делаем</h2>
+                <p>Полный спектр услуг для автоматизации и роста вашего бизнеса</p>
+            </div>
+            <div class="services-grid">
+                <div class="service">
+                    <div class="service-number">01</div>
+                    <h3>AI Чат-боты</h3>
+                    <p>Автоматические ассистенты для Instagram, WhatsApp и других каналов. Квалифицируют лидов и берут первый контакт на себя.</p>
+                </div>
+                <div class="service">
+                    <div class="service-number">02</div>
+                    <h3>CRM и Автоматизация</h3>
+                    <p>Интегрируем вашу систему продаж, настраиваем воронку, автоматизируем рутину. Команда работает эффективнее.</p>
+                </div>
+                <div class="service">
+                    <div class="service-number">03</div>
+                    <h3>SMM и Контент</h3>
+                    <p>Стратегия, контент-план, съёмка и дизайн. Вашего бренда будут узнавать и доверять.</p>
+                </div>
+                <div class="service">
+                    <div class="service-number">04</div>
+                    <h3>Контекстная реклама</h3>
+                    <p>Google Ads, Яндекс Директ, Meta Ads. Приводим людей, которые уже ищут ваше решение.</p>
+                </div>
+                <div class="service">
+                    <div class="service-number">05</div>
+                    <h3>Видеопродакшн</h3>
+                    <p>Съёмка, монтаж, озвучка, анимация. Контент, который продаёт и удерживает внимание.</p>
+                </div>
+                <div class="service">
+                    <div class="service-number">06</div>
+                    <h3>Аудиты и Консалтинг</h3>
+                    <p>Анализируем ваш маркетинг, находим потери, даём дорожную карту роста. Данные, не предположения.</p>
+                </div>
+                <div class="service">
+                    <div class="service-number">07</div>
+                    <h3>AI Решения</h3>
+                    <p>Генерация контента, видеоролики, персональные рекомендации. Используем AI где он реально работает.</p>
+                </div>
+                <div class="service">
+                    <div class="service-number">08</div>
+                    <h3>Email и SMS</h3>
+                    <p>Автоматические последовательности, которые конвертируют. От первого контакта до повторной покупки.</p>
+                </div>
+                <div class="service">
+                    <div class="service-number">09</div>
+                    <h3>Воронка продаж</h3>
+                    <p>Проектируем и настраиваем полный цикл: привлечение → квалификация → продажа → удержание.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Результаты</h2>
+                <p>Реальные примеры роста наших клиентов</p>
+            </div>
+            <div class="cases-grid">
+                <div class="case">
+                    <div class="case-label">Фитнес</div>
+                    <h3>Фитнес-студия</h3>
+                    <p class="case-desc">Запустили AI-бот в Instagram. Система автоматически записывает клиентов на занятия и отправляет расписание.</p>
+                    <div class="case-result">+35 клиентов в месяц, 40 часов администратора сэкономлено</div>
+                </div>
+                <div class="case">
+                    <div class="case-label">Образование</div>
+                    <h3>Школа тренеров</h3>
+                    <p class="case-desc">SMM + таргет + CRM. Увеличили охват, конвертировали лучше. Каждый уровень воронки был оптимизирован.</p>
+                    <div class="case-result">+60 студентов за 3 месяца, ROI кампании 4.5x</div>
+                </div>
+                <div class="case">
+                    <div class="case-label">Красота</div>
+                    <h3>Клиника косметологии</h3>
+                    <p class="case-desc">Провели аудит, нашли потери в воронке. AI-консультант, оптимизация рекламы, email-последовательность.</p>
+                    <div class="case-result">+45% выручки, средний чек вырос на 20%, 50 процедур в месяц</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="container">
+        <div class="cta">
+            <h2>Готовы к росту?</h2>
+            <p>Консультация бесплатная. Расскажем, что можем сделать именно для вас.</p>
+            <a href="#contact" class="btn btn-primary">Заказать консультацию</a>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>О NeuroBrand</h2>
+                <p>Мы помогаем растущим компаниям зарабатывать через автоматизацию и стратегию</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px;">
+                <div>
+                    <h3>Как мы работаем</h3>
+                    <p style="margin-top: 15px;">Сначала слушаем. Потом анализируем. Затем строим систему, которая работает. И постоянно улучшаем по метрикам, не по интуиции.</p>
+                    <p style="margin-top: 15px;">Каждый клиент — партнёр. Ваш рост — наш рост.</p>
+                </div>
+                <div>
+                    <h3>Наш результат</h3>
+                    <p style="margin-top: 15px;"><strong>50+ компаний</strong> построили системы продаж вместе с нами</p>
+                    <p style="margin-top: 15px;"><strong>+40% средний рост</strong> выручки клиентов в первые 3 месяца</p>
+                    <p style="margin-top: 15px;"><strong>3.2x средний ROI</strong> от внедрённых решений</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Свяжитесь с нами</h2>
+                <p>Давайте обсудим, как автоматизировать продажи вашего бренда</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 50px;">
+                <div>
+                    <h3>Контактная информация</h3>
+                    <p style="margin-top: 20px;"><strong>Email</strong><br><a href="mailto:hello@neurobrand.kz">hello@neurobrand.kz</a></p>
+                    <p style="margin-top: 20px;"><strong>Телефон</strong><br><a href="tel:+7">+7 (XXX) XXX-XX-XX</a></p>
+                    <p style="margin-top: 20px;"><strong>Адрес</strong><br>Астана, Казахстан</p>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-muted);">Ответим в течение 24 часов</p>
+                </div>
+                <div>
+                    <form id="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+                        <input type="text" placeholder="Ваше имя" required style="padding: 12px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: inherit;">
+                        <input type="email" placeholder="Email" required style="padding: 12px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: inherit;">
+                        <textarea placeholder="Сообщение" rows="4" required style="padding: 12px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: inherit; resize: vertical;"></textarea>
+                        <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="#services">Все услуги</a></li>
+                        <li><a href="#services">AI Решения</a></li>
+                        <li><a href="#services">Маркетинг</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#cases">Кейсы</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="mailto:hello@neurobrand.kz">hello@neurobrand.kz</a></li>
+                        <li><a href="tel:+7">+7 (XXX) XXX-XX-XX</a></li>
+                        <li><a href="#">Астана, Казахстан</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NeuroBrand. Strategy • Brand • Impact</p>
+            </div>
         </div>
     </footer>
 
