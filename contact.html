@@ -1,125 +1,180 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Контакты — NeuroBrand</title>
-<meta name="description" content="Оставьте заявку на AI-автоматизацию или маркетинговое продвижение.">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - NeuroBrand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class="noise-bg"></div><div class="grain"></div>
-
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="assets/logo-mark.png" alt="NeuroBrand" style="height:34px;width:auto;">
-      <span class="logo-text">NEURO<span>BRAND</span></span>
-    </a>
-    <nav class="main-nav">
-      <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
-      <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
-      <a href="cases.html" data-i18n="nav.cases">Кейсы</a>
-      <a href="about.html" data-i18n="nav.about">О нас</a>
-      <a href="contact.html" class="active" data-i18n="nav.contact">Контакты</a>
-    </nav>
-    <div class="header-actions">
-      <button class="burger" id="burgerBtn" aria-label="Меню">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-      <div class="lang-switch" id="langSwitch">
-        <button data-lang="ru" class="active">RU</button>
-        <button data-lang="kz">KZ</button>
-      </div>
+    <!-- ВОЛНЫ -->
+    <div class="wave-container">
+        <svg class="wave-left" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGradientLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ba55d3;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#da70d6;stop-opacity:0.3" />
+                </linearGradient>
+            </defs>
+            <path d="M0,50 Q50,20 100,50 T200,50 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" />
+            <path d="M0,100 Q50,70 100,100 T200,100 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" opacity="0.6" />
+            <path d="M0,150 Q50,120 100,150 T200,150 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" opacity="0.3" />
+        </svg>
+        <svg class="wave-right" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGradientRight" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#da70d6;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#ba55d3;stop-opacity:0.3" />
+                </linearGradient>
+            </defs>
+            <path d="M0,50 Q50,20 100,50 T200,50 L200,300 L0,300 Z" fill="url(#waveGradientRight)" />
+            <path d="M0,100 Q50,70 100,100 T200,100 L200,300 L0,300 Z" fill="url(#waveGradientRight)" opacity="0.6" />
+            <path d="M0,150 Q50,120 100,150 T200,150 L200,300 L0,300 Z" fill="url(#waveGradientRight)" opacity="0.3" />
+        </svg>
     </div>
-  </div>
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
-    <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
-    <a href="cases.html" data-i18n="nav.cases">Кейсы</a>
-    <a href="about.html" data-i18n="nav.about">О нас</a>
-    <a href="contact.html" class="active" data-i18n="nav.contact">Контакты</a>
-  </nav>
-</header>
 
-<main>
-  <section class="hero" style="padding-bottom:20px;">
-    <div class="wrap">
-      <div class="eyebrow"><span class="dot"></span><span data-i18n="contactPage.eyebrow">Заявка</span></div>
-      <h1 data-i18n="contactPage.h1">Расскажите о <em>своей задаче</em></h1>
-      <p class="lead" data-i18n="contactPage.lead">Выберите направление — ответим в ближайшее время и предложим следующий шаг.</p>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:10px;">
-    <div class="wrap" style="max-width:640px;">
-      <div class="form-card">
-        <div class="tabs">
-          <button class="tab-btn active" data-tab="ai" id="tabAi" data-i18n="contactPage.tabAi">Хочу AI-бота</button>
-          <button class="tab-btn" data-tab="marketing" id="tabMarketing" data-i18n="contactPage.tabMarketing">Хочу продвижение</button>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-section">
+            <img src="assets/images/logo.png" alt="NeuroBrand" class="logo-img">
+            <span class="logo-text">NEUROBRAND</span>
         </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="cases.html">Кейсы</a>
+            <a href="about.html">О нас</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+    </header>
 
-        <form id="leadForm">
-          <div class="field">
-            <label data-i18n="contactPage.fieldName">Имя</label>
-            <input type="text" name="name" required>
-          </div>
-          <div class="field">
-            <label data-i18n="contactPage.fieldContact">Телефон или мессенджер</label>
-            <input type="text" name="contact" required>
-          </div>
-          <div class="field" id="companyField">
-            <label data-i18n="contactPage.fieldCompany">Сфера бизнеса</label>
-            <input type="text" name="company" placeholder="Например: фитнес-студия, салон красоты…">
-          </div>
-          <div class="field">
-            <label data-i18n="contactPage.fieldMessage">Комментарий</label>
-            <textarea name="message" data-i18n-ph="contactPage.fieldMessagePh" placeholder="Кратко опишите задачу"></textarea>
-          </div>
-          <input type="hidden" name="direction" id="directionInput" value="ai">
-          <button type="submit" class="btn btn-primary btn-block" data-i18n="contactPage.submit">Отправить заявку</button>
-          <p class="form-note" data-i18n="contactPage.note">Заявки пока обрабатываются вручную — подключим автоматическую отправку в CRM/мессенджер на следующем этапе.</p>
-        </form>
+    <main>
+        <!-- CONTACT SECTION -->
+        <section style="padding: 100px 20px; max-width: 1000px; margin: 0 auto; position: relative; z-index: 10;">
+            <h1 style="font-size: 3rem; margin-bottom: 30px; text-align: center;">
+                Свяжитесь с <span class="highlight">нами</span>
+            </h1>
 
-        <div class="form-success" id="formSuccess">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
-          <h4 data-i18n="contactPage.successTitle">Заявка отправлена</h4>
-          <p data-i18n="contactPage.successText">Спасибо! Это демо-версия формы — при подключении бэкенда заявка автоматически придёт в вашу CRM или мессенджер.</p>
+            <p style="text-align: center; font-size: 1.1rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 60px; line-height: 1.7;">
+                Вы можете связаться с нами через форму ниже, написать письмо или позвонить. Мы ответим в течение 24 часов.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 60px;">
+                <!-- Контактная информация -->
+                <div>
+                    <h3 style="color: var(--secondary); font-size: 1.4rem; margin-bottom: 30px;">Контактная информация</h3>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Email</h4>
+                        <a href="mailto:hello@neurobrand.kz" style="color: var(--secondary); text-decoration: none; font-size: 1.05rem;">hello@neurobrand.kz</a>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Телефон</h4>
+                        <a href="tel:+7" style="color: var(--secondary); text-decoration: none; font-size: 1.05rem;">+7 (XXX) XXX-XX-XX</a>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Адрес</h4>
+                        <p style="color: var(--text-muted); font-size: 1.05rem;">
+                            Астана, Казахстан<br>
+                            Бизнес-центр
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(100, 50, 130, 0.1); border: 1px solid rgba(186, 85, 211, 0.3); border-radius: 12px; padding: 25px; margin-top: 40px;">
+                        <h4 style="color: var(--secondary); margin-bottom: 15px;">⏰ Часы работы</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 8px;">Пн-Пт: 09:00 - 18:00</p>
+                        <p style="color: var(--text-muted); margin-bottom: 8px;">Сб-Вс: По договорённости</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Обычно отвечаем в течение 24 часов</p>
+                    </div>
+                </div>
+
+                <!-- Форма -->
+                <div>
+                    <h3 style="color: var(--secondary); font-size: 1.4rem; margin-bottom: 30px;">Отправить сообщение</h3>
+
+                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <label for="name" style="display: block; margin-bottom: 8px; color: var(--text-light); font-weight: 500;">Ваше имя</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; background: rgba(100, 50, 130, 0.1); border: 1px solid rgba(186, 85, 211, 0.3); border-radius: 8px; color: var(--text-light); font-family: inherit;" />
+                        </div>
+
+                        <div>
+                            <label for="email" style="display: block; margin-bottom: 8px; color: var(--text-light); font-weight: 500;">Email</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; background: rgba(100, 50, 130, 0.1); border: 1px solid rgba(186, 85, 211, 0.3); border-radius: 8px; color: var(--text-light); font-family: inherit;" />
+                        </div>
+
+                        <div>
+                            <label for="phone" style="display: block; margin-bottom: 8px; color: var(--text-light); font-weight: 500;">Телефон</label>
+                            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 12px; background: rgba(100, 50, 130, 0.1); border: 1px solid rgba(186, 85, 211, 0.3); border-radius: 8px; color: var(--text-light); font-family: inherit;" />
+                        </div>
+
+                        <div>
+                            <label for="service" style="display: block; margin-bottom: 8px; color: var(--text-light); font-weight: 500;">Интересующая услуга</label>
+                            <select id="service" name="service" style="width: 100%; padding: 12px; background: rgba(100, 50, 130, 0.1); border: 1px solid rgba(186, 85, 211, 0.3); border-radius: 8px; color: var(--text-light); font-family: inherit;">
+                                <option value="" style="background-color: #1a1a2e;">Выберите услугу</option>
+                                <option value="ai" style="background-color: #1a1a2e;">AI Автоматизация</option>
+                                <option value="marketing" style="background-color: #1a1a2e;">Маркетинг</option>
+                                <option value="audit" style="background-color: #1a1a2e;">Аудит</option>
+                                <option value="consultation" style="background-color: #1a1a2e;">Консультация</option>
+                                <option value="other" style="background-color: #1a1a2e;">Другое</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" style="display: block; margin-bottom: 8px; color: var(--text-light); font-weight: 500;">Сообщение</label>
+                            <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 12px; background: rgba(100, 50, 130, 0.1); border: 1px solid rgba(186, 85, 211, 0.3); border-radius: 8px; color: var(--text-light); font-family: inherit; resize: vertical;"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Отправить</button>
+                    </form>
+
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 20px;">
+                        Ваши данные защищены и не будут переданы третьим лицам
+                    </p>
+                </div>
+            </div>
+
+            @media (max-width: 768px) {
+                .grid { grid-template-columns: 1fr !important; }
+            }
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Услуги</h4>
+                <ul>
+                    <li><a href="services.html#ai-services">AI Автоматизация</a></li>
+                    <li><a href="services.html#marketing-services">Маркетинг</a></li>
+                    <li><a href="services.html">Все услуги</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Компания</h4>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="cases.html">Кейсы</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="mailto:hello@neurobrand.kz">hello@neurobrand.kz</a></li>
+                    <li><a href="tel:+7">+7 (XXX) XXX-XX-XX</a></li>
+                    <li><a href="#">Астана, Казахстан</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="logo">
-        <img src="assets/logo-mark.png" alt="NeuroBrand" style="height:26px;width:auto;">
-        <span class="logo-text">NEURO<span>BRAND</span></span>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h5 data-i18n="footer.col1">Направления</h5>
-          <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
-          <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NeuroBrand. Все права защищены. | Strategy • Brand • Impact</p>
         </div>
-        <div class="footer-col">
-          <h5 data-i18n="footer.col2">Компания</h5>
-          <a href="cases.html" data-i18n="nav.cases">Кейсы</a>
-          <a href="about.html" data-i18n="nav.about">О нас</a>
-          <a href="contact.html" data-i18n="nav.contact">Контакты</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 NeuroBrand</span>
-      <span data-i18n="footer.tag">Strategy · Brand · Impact</span>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

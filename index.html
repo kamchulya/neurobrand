@@ -3,365 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuroBrand — Автоматизация и маркетинг для вашего бизнеса</title>
+    <title>NeuroBrand - Strategy • Brand • Impact</title>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Syne', sans-serif;
-            background: linear-gradient(135deg, #0a0510 0%, #1a0f35 25%, #0f0a1a 50%, #1a0f35 75%, #0a0510 100%);
-            color: #e0d7f0;
-            overflow-x: hidden;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(12px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes floatBg {
-            0%, 100% {
-                transform: translateY(0px) scaleX(1);
-                opacity: 0.2;
-            }
-            50% {
-                transform: translateY(-30px) scaleX(1.08);
-                opacity: 0.28;
-            }
-        }
-
-        .benefit-item {
-            opacity: 0;
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        .bg-element {
-            position: absolute;
-            animation: floatBg 8s ease-in-out infinite;
-            z-index: 1;
-        }
-
-        /* Navigation */
-        .nav {
-            padding: 24px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 10;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-mark {
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #c084fc 0%, #a78bfa 100%);
-            border-radius: 8px;
-            font-size: 24px;
-            font-weight: 900;
-            color: #fff;
-            letter-spacing: -1px;
-        }
-
-        .logo-text {
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            color: #8b7eb8;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            font-size: 14px;
-        }
-
-        .nav-links a {
-            color: #a0aec0;
-            text-decoration: none;
-            transition: color 0.2s;
-            cursor: pointer;
-        }
-
-        .nav-links a:hover {
-            color: #d4b5fd;
-        }
-
-        /* Hero */
-        .hero-section {
-            min-height: 100vh;
-            padding: 100px 40px 50px;
-            text-align: center;
-            position: relative;
-            z-index: 5;
-        }
-
-        .hero-title {
-            font-size: 76px;
-            font-weight: 900;
-            color: #fff;
-            margin: 0 0 20px;
-            letter-spacing: -1.5px;
-            line-height: 1.05;
-        }
-
-        .brand-word {
-            background: linear-gradient(90deg, #c084fc 0%, #a78bfa 50%, #9d6eff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 18px;
-            color: #b4a9d6;
-            margin: 0 0 60px;
-            max-width: 720px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        /* Benefits */
-        .benefits {
-            max-width: 760px;
-            margin: 0 auto 80px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .benefit {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            font-size: 17px;
-            color: #e0d7f0;
-            justify-content: center;
-            font-weight: 500;
-        }
-
-        .benefit-dot {
-            width: 6px;
-            height: 6px;
-            background: linear-gradient(135deg, #c084fc 0%, #a78bfa 100%);
-            border-radius: 50%;
-            flex-shrink: 0;
-            box-shadow: 0 0 12px rgba(192, 132, 252, 0.4);
-        }
-
-        /* Cards */
-        .cards-container {
-            padding: 0 40px 100px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 28px;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 5;
-        }
-
-        .card {
-            background: linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(139, 92, 246, 0.04) 100%);
-            border: 1px solid rgba(168, 85, 247, 0.25);
-            border-radius: 20px;
-            padding: 48px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .card:hover {
-            background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(139, 92, 246, 0.08) 100%);
-            border-color: rgba(192, 132, 252, 0.4);
-            transform: translateY(-6px);
-        }
-
-        .card-title {
-            font-size: 28px;
-            font-weight: 800;
-            color: #f5f3ff;
-            margin: 0 0 16px;
-            letter-spacing: -0.5px;
-        }
-
-        .card-desc {
-            font-size: 15px;
-            color: #b4a9d6;
-            margin: 0 0 24px;
-            line-height: 1.8;
-        }
-
-        .card-cta {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #d4b5fd;
-            font-weight: 600;
-            font-size: 15px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .card-cta:hover {
-            gap: 12px;
-            color: #e9d5ff;
-        }
-
-        /* Background Glows */
-        .glow-orb-1 {
-            position: absolute;
-            top: 5%;
-            left: 8%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle at 40% 40%, rgba(192, 132, 252, 0.15) 0%, transparent 65%);
-            border-radius: 50%;
-            filter: blur(60px);
-            z-index: 0;
-        }
-
-        .glow-orb-2 {
-            position: absolute;
-            bottom: 10%;
-            right: 5%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle at 60% 60%, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            filter: blur(70px);
-            z-index: 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav {
-                flex-direction: column;
-                gap: 20px;
-                padding: 20px 20px;
-            }
-
-            .hero-title {
-                font-size: 48px;
-            }
-
-            .hero-subtitle {
-                font-size: 16px;
-            }
-
-            .cards-container {
-                grid-template-columns: 1fr;
-                padding: 0 20px 60px;
-            }
-
-            .card {
-                padding: 32px;
-            }
-
-            .card-title {
-                font-size: 22px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="nav">
+    <!-- ВОЛНЫ - SVG -->
+    <div class="wave-container">
+        <svg class="wave-left" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGradientLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ba55d3;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#da70d6;stop-opacity:0.3" />
+                </linearGradient>
+            </defs>
+            <path d="M0,50 Q50,20 100,50 T200,50 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" />
+            <path d="M0,100 Q50,70 100,100 T200,100 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" opacity="0.6" />
+            <path d="M0,150 Q50,120 100,150 T200,150 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" opacity="0.3" />
+        </svg>
+        <svg class="wave-right" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGradientRight" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#da70d6;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#ba55d3;stop-opacity:0.3" />
+                </linearGradient>
+            </defs>
+            <path d="M0,50 Q50,20 100,50 T200,50 L200,300 L0,300 Z" fill="url(#waveGradientRight)" />
+            <path d="M0,100 Q50,70 100,100 T200,100 L200,300 L0,300 Z" fill="url(#waveGradientRight)" opacity="0.6" />
+            <path d="M0,150 Q50,120 100,150 T200,150 L200,300 L0,300 Z" fill="url(#waveGradientRight)" opacity="0.3" />
+        </svg>
+    </div>
+
+    <!-- HEADER -->
+    <header>
         <div class="logo-section">
-            <div class="logo-mark">NB</div>
-            <div class="logo-text">NeuroBrand</div>
+            <img src="assets/images/logo.png" alt="NeuroBrand" class="logo-img">
+            <span class="logo-text">NEUROBRAND</span>
         </div>
-        <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#cases">Cases</a>
-            <a href="#contact">Contact</a>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="cases.html">Кейсы</a>
+            <a href="about.html">О нас</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="logo-3d">
+                    <img src="assets/images/logo.png" alt="NeuroBrand">
+                </div>
+                <h1>
+                    Strategy<br>
+                    <span class="highlight">Brand</span><br>
+                    Impact
+                </h1>
+                <p class="hero-subtitle">
+                    Помогаем онлайн-бизнесу конвертировать больше клиентов через автоматизацию и стратегическое усиление вашего присутствия
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="services.html#ai-services" class="btn btn-primary">🤖 AI Автоматизация</a>
+                    <a href="services.html#marketing-services" class="btn btn-secondary">📊 Маркетинг</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features">
+            <div class="features-container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⏰</div>
+                        <h3>Работаем 24/7</h3>
+                        <p>Продажи и автоматизация не спят. Наши решения работают в любой момент, даже когда вы спите.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Конкуренты молчат</h3>
+                        <p>Пока ваши конкуренты спят на лаврах, вы уже в следующей лиге. Скорость внедрения — ваше преимущество.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>От незнакомца к доверию</h3>
+                        <p>Каждое взаимодействие построено так, чтобы превратить холодного лида в вашего лучшего клиента.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Услуги</h4>
+                <ul>
+                    <li><a href="services.html#ai-services">AI Автоматизация</a></li>
+                    <li><a href="services.html#marketing-services">Маркетинг</a></li>
+                    <li><a href="services.html">Все услуги</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Компания</h4>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="cases.html">Кейсы</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="mailto:hello@neurobrand.kz">hello@neurobrand.kz</a></li>
+                    <li><a href="tel:+7">+7 (XXX) XXX-XX-XX</a></li>
+                    <li><a href="#">Астана, Казахстан</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <h1 class="hero-title">
-            Strategy<br>
-            <span class="brand-word">Brand</span><br>
-            Impact
-        </h1>
-        <p class="hero-subtitle">Помогаем онлайн-бизнесу конвертировать больше клиентов через автоматизацию и стратегическое усиление вашего присутствия</p>
-
-        <!-- Benefits -->
-        <div class="benefits">
-            <div class="benefit-item benefit" style="animation-delay: 0.2s;">
-                <div class="benefit-dot"></div>
-                <span>Продажи, которые работают 24/7</span>
-            </div>
-            <div class="benefit-item benefit" style="animation-delay: 0.4s;">
-                <div class="benefit-dot"></div>
-                <span>Лидируйте, когда конкуренты молчат</span>
-            </div>
-            <div class="benefit-item benefit" style="animation-delay: 0.6s;">
-                <div class="benefit-dot"></div>
-                <span>От незнакомого к доверенному в вашей нише</span>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NeuroBrand. Все права защищены. | Strategy • Brand • Impact</p>
         </div>
+    </footer>
 
-        <!-- Cards -->
-        <div class="cards-container">
-            <div class="card">
-                <h3 class="card-title">Автоматизация</h3>
-                <p class="card-desc">Каждое сообщение становится сделкой. Чат-боты ведут переговоры, квалифицируют клиентов и закрывают первую продажу пока вы спите.</p>
-                <div class="card-cta">Узнать подробнее →</div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Маркетинг</h3>
-                <p class="card-desc">Стратегия, контент, креативы, реклама — всё, чтобы ваш бренд звучал громче конкурентов и привлекал нужных клиентов.</p>
-                <div class="card-cta">Узнать подробнее →</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Background Glows -->
-    <div class="glow-orb-1"></div>
-    <div class="glow-orb-2"></div>
-
-    <script>
-        // Smooth scroll for nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

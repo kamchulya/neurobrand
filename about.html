@@ -1,144 +1,133 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>О нас — NeuroBrand</title>
-<meta name="description" content="Команда NeuroBrand: AI-автоматизация и маркетинг под одним брендом.">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - NeuroBrand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class="noise-bg"></div><div class="grain"></div>
-
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="assets/logo-mark.png" alt="NeuroBrand" style="height:34px;width:auto;">
-      <span class="logo-text">NEURO<span>BRAND</span></span>
-    </a>
-    <nav class="main-nav">
-      <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
-      <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
-      <a href="cases.html" data-i18n="nav.cases">Кейсы</a>
-      <a href="about.html" class="active" data-i18n="nav.about">О нас</a>
-      <a href="contact.html" data-i18n="nav.contact">Контакты</a>
-    </nav>
-    <div class="header-actions">
-      <button class="burger" id="burgerBtn" aria-label="Меню">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-      <div class="lang-switch" id="langSwitch">
-        <button data-lang="ru" class="active">RU</button>
-        <button data-lang="kz">KZ</button>
-      </div>
-      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.cta">Оставить заявку</a>
+    <!-- ВОЛНЫ -->
+    <div class="wave-container">
+        <svg class="wave-left" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGradientLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ba55d3;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#da70d6;stop-opacity:0.3" />
+                </linearGradient>
+            </defs>
+            <path d="M0,50 Q50,20 100,50 T200,50 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" />
+            <path d="M0,100 Q50,70 100,100 T200,100 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" opacity="0.6" />
+            <path d="M0,150 Q50,120 100,150 T200,150 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" opacity="0.3" />
+        </svg>
+        <svg class="wave-right" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGradientRight" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#da70d6;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#ba55d3;stop-opacity:0.3" />
+                </linearGradient>
+            </defs>
+            <path d="M0,50 Q50,20 100,50 T200,50 L200,300 L0,300 Z" fill="url(#waveGradientRight)" />
+            <path d="M0,100 Q50,70 100,100 T200,100 L200,300 L0,300 Z" fill="url(#waveGradientRight)" opacity="0.6" />
+            <path d="M0,150 Q50,120 100,150 T200,150 L200,300 L0,300 Z" fill="url(#waveGradientRight)" opacity="0.3" />
+        </svg>
     </div>
-  </div>
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
-    <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
-    <a href="cases.html" data-i18n="nav.cases">Кейсы</a>
-    <a href="about.html" class="active" data-i18n="nav.about">О нас</a>
-    <a href="contact.html" data-i18n="nav.contact">Контакты</a>
-  </nav>
-</header>
 
-<main>
-  <section class="hero" style="padding-bottom:20px;">
-    <div class="wrap">
-      <div class="eyebrow"><span class="dot"></span><span data-i18n="aboutPage.eyebrow">Команда</span></div>
-      <h1 data-i18n="aboutPage.h1">Два направления. <em>Одна цель</em> — рост вашего бизнеса</h1>
-      <p class="lead" data-i18n="aboutPage.lead">NeuroBrand основали два партнёра, каждый — эксперт в своей области. Мы объединили AI-автоматизацию и маркетинг, чтобы бизнес получал результат, а не разрозненные услуги.</p>
-    </div>
-  </section>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-section">
+            <img src="assets/images/logo.png" alt="NeuroBrand" class="logo-img">
+            <span class="logo-text">NEUROBRAND</span>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="cases.html">Кейсы</a>
+            <a href="about.html">О нас</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+    </header>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="founders">
-        <div class="founder-card">
-          <div class="avatar-ring">AI</div>
-          <h4 data-i18n="aboutPage.f1.name">Направление AI и автоматизация</h4>
-          <div class="role" data-i18n="aboutPage.f1.role">Чат-боты · CRM · AI-агенты</div>
-          <p data-i18n="aboutPage.f1.text">Отвечает за всё, что касается автоматизации: от AI-чат-ботов для записи клиентов до внедрения AI в отдел продаж и CRM-системы.</p>
-        </div>
-        <div class="founder-card">
-          <div class="avatar-ring">SM</div>
-          <h4 data-i18n="aboutPage.f2.name">Направление маркетинга</h4>
-          <div class="role" data-i18n="aboutPage.f2.role">SMM · Продакшн · Реклама</div>
-          <p data-i18n="aboutPage.f2.text">Отвечает за продвижение бренда: контент, съёмки, таргетированную и контекстную рекламу, маркетинговую стратегию.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <main>
+        <!-- ABOUT SECTION -->
+        <section style="padding: 100px 20px; max-width: 1000px; margin: 0 auto; position: relative; z-index: 10;">
+            <h1 style="font-size: 3rem; margin-bottom: 30px;">
+                О <span class="highlight">NeuroBrand</span>
+            </h1>
 
-  <section class="section section-alt">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow"><span class="dot"></span><span data-i18n="aboutPage.approach.eyebrow">Как мы работаем</span></div>
-        <h2 data-i18n="aboutPage.approach.title">Без хаоса и лишних инструментов</h2>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg></div>
-          <h4 data-i18n="aboutPage.a1.title">Решения под задачу</h4>
-          <p data-i18n="aboutPage.a1.text">Не продаём всё подряд — предлагаем то, что реально решает проблему бизнеса.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z"/></svg></div>
-          <h4 data-i18n="aboutPage.a2.title">Быстрый результат</h4>
-          <p data-i18n="aboutPage.a2.text">Флагманские продукты запускаются быстро — вы видите эффект уже на старте.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
-          <h4 data-i18n="aboutPage.a3.title">Прозрачная отчётность</h4>
-          <p data-i18n="aboutPage.a3.text">Вы всегда видите, что делается и какой результат это даёт.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+            <div style="background: rgba(100, 50, 130, 0.1); border: 1px solid rgba(186, 85, 211, 0.3); border-radius: 15px; padding: 40px; margin-bottom: 40px;">
+                <h2 style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 20px;">Наша миссия</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">
+                    Мы помогаем онлайн-бизнесу конвертировать больше клиентов через умную автоматизацию и стратегическое усиление присутствия. Каждый день мы работаем над тем, чтобы ваши продажи работали 24/7, а команда фокусировалась на стратегии, а не на рутине.
+                </p>
+            </div>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="cta-banner">
-        <h2 data-i18n="aboutPage.ctaBanner.title">Готовы обсудить свой проект?</h2>
-        <p data-i18n="aboutPage.ctaBanner.text">Расскажите, какое направление вам ближе — начнём с короткого разговора.</p>
-        <div class="cta-row">
-          <a href="contact.html" class="btn btn-primary" data-i18n="aboutPage.ctaBanner.btn">Оставить заявку</a>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                <div style="background: rgba(100, 50, 130, 0.1); border-left: 3px solid var(--secondary); padding: 25px; border-radius: 8px;">
+                    <h3 style="color: var(--secondary); margin-bottom: 10px;">Опыт</h3>
+                    <p style="color: var(--text-muted);">5+ лет в сфере цифрового маркетинга и автоматизации. Работали со 50+ компаниями от стартапов до крупных агентств.</p>
+                </div>
+                <div style="background: rgba(100, 50, 130, 0.1); border-left: 3px solid var(--secondary); padding: 25px; border-radius: 8px;">
+                    <h3 style="color: var(--secondary); margin-bottom: 10px;">Инновация</h3>
+                    <p style="color: var(--text-muted);">Всегда впереди трендов. Используем последние технологии AI и аналитики, чтобы ваш бизнес был на шаг впереди конкурентов.</p>
+                </div>
+                <div style="background: rgba(100, 50, 130, 0.1); border-left: 3px solid var(--secondary); padding: 25px; border-radius: 8px;">
+                    <h3 style="color: var(--secondary); margin-bottom: 10px;">Результаты</h3>
+                    <p style="color: var(--text-muted);">Средний рост продаж клиентов — 40% в первые 3 месяца. Средний ROI внедрённых решений — 2.8x.</p>
+                </div>
+            </div>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="logo">
-        <img src="assets/logo-mark.png" alt="NeuroBrand" style="height:26px;width:auto;">
-        <span class="logo-text">NEURO<span>BRAND</span></span>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h5 data-i18n="footer.col1">Направления</h5>
-          <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
-          <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
-        </div>
-        <div class="footer-col">
-          <h5 data-i18n="footer.col2">Компания</h5>
-          <a href="cases.html" data-i18n="nav.cases">Кейсы</a>
-          <a href="about.html" data-i18n="nav.about">О нас</a>
-          <a href="contact.html" data-i18n="nav.contact">Контакты</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 NeuroBrand</span>
-      <span data-i18n="footer.tag">Strategy · Brand · Impact</span>
-    </div>
-  </div>
-</footer>
+            <div style="background: rgba(100, 50, 130, 0.1); border: 1px solid rgba(186, 85, 211, 0.3); border-radius: 15px; padding: 40px;">
+                <h2 style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 20px;">Почему нас выбирают?</h2>
+                <ul style="list-style: none; color: var(--text-muted); font-size: 1.05rem; line-height: 2;">
+                    <li>✅ <strong>Комплексный подход.</strong> Не просто услуги, а полный цикл: от аудита до внедрения и поддержки.</li>
+                    <li>✅ <strong>Данные, не гадания.</strong> Каждое решение основано на анализе и метриках вашего бизнеса.</li>
+                    <li>✅ <strong>Быстрые результаты.</strong> Видимые улучшения в течение первого месяца.</li>
+                    <li>✅ <strong>Прозрачность.</strong> Понимаете, что вы платите и за что. Живая отчётность по KPI.</li>
+                    <li>✅ <strong>Партнёрский подход.</strong> Ваш успех — наш успех. Растём вместе.</li>
+                </ul>
+            </div>
 
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
+            <div style="text-align: center; margin-top: 60px;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Готовы начать?</h3>
+                <a href="contact.html" class="btn btn-primary" style="padding: 18px 50px; font-size: 1.1rem;">Запросить консультацию</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Услуги</h4>
+                <ul>
+                    <li><a href="services.html#ai-services">AI Автоматизация</a></li>
+                    <li><a href="services.html#marketing-services">Маркетинг</a></li>
+                    <li><a href="services.html">Все услуги</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Компания</h4>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="cases.html">Кейсы</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="mailto:hello@neurobrand.kz">hello@neurobrand.kz</a></li>
+                    <li><a href="tel:+7">+7 (XXX) XXX-XX-XX</a></li>
+                    <li><a href="#">Астана, Казахстан</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NeuroBrand. Все права защищены. | Strategy • Brand • Impact</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,161 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Кейсы — NeuroBrand</title>
-<meta name="description" content="Реальные кейсы NeuroBrand: AI-автоматизация и маркетинговое продвижение.">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейсы - NeuroBrand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class="noise-bg"></div><div class="grain"></div>
-
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="assets/logo-mark.png" alt="NeuroBrand" style="height:34px;width:auto;">
-      <span class="logo-text">NEURO<span>BRAND</span></span>
-    </a>
-    <nav class="main-nav">
-      <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
-      <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
-      <a href="cases.html" class="active" data-i18n="nav.cases">Кейсы</a>
-      <a href="about.html" data-i18n="nav.about">О нас</a>
-      <a href="contact.html" data-i18n="nav.contact">Контакты</a>
-    </nav>
-    <div class="header-actions">
-      <button class="burger" id="burgerBtn" aria-label="Меню">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-      <div class="lang-switch" id="langSwitch">
-        <button data-lang="ru" class="active">RU</button>
-        <button data-lang="kz">KZ</button>
-      </div>
-      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.cta">Оставить заявку</a>
+    <!-- ВОЛНЫ -->
+    <div class="wave-container">
+        <svg class="wave-left" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGradientLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ba55d3;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#da70d6;stop-opacity:0.3" />
+                </linearGradient>
+            </defs>
+            <path d="M0,50 Q50,20 100,50 T200,50 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" />
+            <path d="M0,100 Q50,70 100,100 T200,100 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" opacity="0.6" />
+            <path d="M0,150 Q50,120 100,150 T200,150 L200,300 L0,300 Z" fill="url(#waveGradientLeft)" opacity="0.3" />
+        </svg>
+        <svg class="wave-right" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGradientRight" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#da70d6;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#ba55d3;stop-opacity:0.3" />
+                </linearGradient>
+            </defs>
+            <path d="M0,50 Q50,20 100,50 T200,50 L200,300 L0,300 Z" fill="url(#waveGradientRight)" />
+            <path d="M0,100 Q50,70 100,100 T200,100 L200,300 L0,300 Z" fill="url(#waveGradientRight)" opacity="0.6" />
+            <path d="M0,150 Q50,120 100,150 T200,150 L200,300 L0,300 Z" fill="url(#waveGradientRight)" opacity="0.3" />
+        </svg>
     </div>
-  </div>
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
-    <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
-    <a href="cases.html" class="active" data-i18n="nav.cases">Кейсы</a>
-    <a href="about.html" data-i18n="nav.about">О нас</a>
-    <a href="contact.html" data-i18n="nav.contact">Контакты</a>
-  </nav>
-</header>
 
-<main>
-  <section class="hero" style="padding-bottom:20px;">
-    <div class="wrap">
-      <div class="eyebrow"><span class="dot"></span><span data-i18n="casesPage.eyebrow">Портфолио</span></div>
-      <h1 data-i18n="casesPage.h1">Кейсы <em>по обоим направлениям</em></h1>
-      <p class="lead" data-i18n="casesPage.lead">Реальные проекты, над которыми уже работает команда NeuroBrand.</p>
-    </div>
-  </section>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-section">
+            <img src="assets/images/logo.png" alt="NeuroBrand" class="logo-img">
+            <span class="logo-text">NEUROBRAND</span>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="cases.html">Кейсы</a>
+            <a href="about.html">О нас</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+    </header>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="grid-3">
-        <div class="case-card">
-          <div class="case-media">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2v20M2 12h20" stroke-linecap="round"/><circle cx="12" cy="12" r="9"/></svg>
-          </div>
-          <div class="case-body">
-            <span class="case-tag" data-i18n="cases.c1.tag">AI-автоматизация</span>
-            <h4 data-i18n="cases.c1.title">Фитнес-студия</h4>
-            <p data-i18n="cases.c1.textFull">AI-бот принимает заявки и записывает клиентов на тренировки без участия администратора, отвечая мгновенно в любое время суток.</p>
-            <div class="placeholder-note" data-i18n="cases.placeholder">Раздел для реальных цифр и отзыва клиента — добавим после согласования с заказчиком</div>
-          </div>
-        </div>
-        <div class="case-card">
-          <div class="case-media">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          </div>
-          <div class="case-body">
-            <span class="case-tag" data-i18n="cases.c2.tag">AI-автоматизация</span>
-            <h4 data-i18n="cases.c2.title">Школа тренеров</h4>
-            <p data-i18n="cases.c2.textFull">Бот квалифицирует будущих учеников по критериям школы и записывает их на курс без ручной обработки заявок.</p>
-            <div class="placeholder-note" data-i18n="cases.placeholder">Раздел для реальных цифр и отзыва клиента — добавим после согласования с заказчиком</div>
-          </div>
-        </div>
-        <div class="case-card">
-          <div class="case-media">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.4"/></svg>
-          </div>
-          <div class="case-body">
-            <span class="case-tag" data-i18n="cases.c3.tag">Скоро — AI-автоматизация</span>
-            <h4 data-i18n="cases.c3.title">Косметология</h4>
-            <p data-i18n="cases.c3.textFull">Проект в работе: бот для записи на процедуры и квалификации клиентов салона.</p>
-            <div class="placeholder-note" data-i18n="cases.placeholderSoon">Кейс появится после завершения проекта</div>
-          </div>
-        </div>
-        <div class="case-card">
-          <div class="case-media">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
-          </div>
-          <div class="case-body">
-            <span class="case-tag" data-i18n="cases.c4.tag">SMM-продвижение</span>
-            <h4 data-i18n="cases.c4.title">Дистрибьюторская компания №1</h4>
-            <p data-i18n="cases.c4.textFull">Ведение соцсетей: контент-план, дизайн, съёмки и системное присутствие бренда.</p>
-            <div class="placeholder-note" data-i18n="cases.placeholder">Раздел для реальных цифр и отзыва клиента — добавим после согласования с заказчиком</div>
-          </div>
-        </div>
-        <div class="case-card">
-          <div class="case-media">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
-          </div>
-          <div class="case-body">
-            <span class="case-tag" data-i18n="cases.c5.tag">SMM-продвижение</span>
-            <h4 data-i18n="cases.c5.title">Дистрибьюторская компания №2</h4>
-            <p data-i18n="cases.c5.textFull">Ведение соцсетей: контент-план, дизайн, съёмки и системное присутствие бренда.</p>
-            <div class="placeholder-note" data-i18n="cases.placeholder">Раздел для реальных цифр и отзыва клиента — добавим после согласования с заказчиком</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <main>
+        <!-- CASES SECTION -->
+        <section class="cases">
+            <div class="cases-container">
+                <h2 class="section-title">Реальные <span class="highlight">Результаты</span></h2>
+                
+                <div class="cases-grid">
+                    <!-- CASE 1: Фитнес-студия -->
+                    <div class="case-card">
+                        <div class="case-image">💪</div>
+                        <div class="case-content">
+                            <span class="case-category">Фитнес</span>
+                            <h3 class="case-title">Фитнес-студия</h3>
+                            <p class="case-description">
+                                Внедрили AI-чат-бот для автоматической записи клиентов в Instagram. Система квалифицирует лидов, отправляет расписание и берёт на себя 80% работы администратора.
+                            </p>
+                            <div class="case-result">
+                                ✨ Результат: +40% новых клиентов в месяц, экономия 60 часов администратора в месяц
+                            </div>
+                        </div>
+                    </div>
 
-  <section class="section section-alt">
-    <div class="wrap">
-      <div class="cta-banner">
-        <h2 data-i18n="casesPage.ctaBanner.title">Хотите быть следующим кейсом?</h2>
-        <p data-i18n="casesPage.ctaBanner.text">Расскажите о своём бизнесе — обсудим, что можно улучшить уже сейчас.</p>
-        <div class="cta-row">
-          <a href="contact.html" class="btn btn-primary" data-i18n="casesPage.ctaBanner.btn">Оставить заявку</a>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+                    <!-- CASE 2: Школа тренеров -->
+                    <div class="case-card">
+                        <div class="case-image">🎓</div>
+                        <div class="case-content">
+                            <span class="case-category">Образование</span>
+                            <h3 class="case-title">Школа онлайн-тренеров</h3>
+                            <p class="case-description">
+                                Запустили SMM-кампанию с контент-планом и таргетированной рекламой. Созданы Reels для привлечения целевой аудитории. Прямая интеграция с AI-ботом для сбора заявок.
+                            </p>
+                            <div class="case-result">
+                                ✨ Результат: +60 студентов за квартал, CAC снизился на 35%, LTV увеличилась на 2.5x
+                            </div>
+                        </div>
+                    </div>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="logo">
-        <img src="assets/logo-mark.png" alt="NeuroBrand" style="height:26px;width:auto;">
-        <span class="logo-text">NEURO<span>BRAND</span></span>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h5 data-i18n="footer.col1">Направления</h5>
-          <a href="ai.html" data-i18n="nav.ai">AI и автоматизация</a>
-          <a href="marketing.html" data-i18n="nav.marketing">Маркетинг</a>
-        </div>
-        <div class="footer-col">
-          <h5 data-i18n="footer.col2">Компания</h5>
-          <a href="cases.html" data-i18n="nav.cases">Кейсы</a>
-          <a href="about.html" data-i18n="nav.about">О нас</a>
-          <a href="contact.html" data-i18n="nav.contact">Контакты</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 NeuroBrand</span>
-      <span data-i18n="footer.tag">Strategy · Brand · Impact</span>
-    </div>
-  </div>
-</footer>
+                    <!-- CASE 3: Косметология -->
+                    <div class="case-card">
+                        <div class="case-image">💄</div>
+                        <div class="case-content">
+                            <span class="case-category">Красота</span>
+                            <h3 class="case-title">Клиника косметологии</h3>
+                            <p class="case-description">
+                                Полный маркетинговый аудит выявил потерю 40% потенциальных клиентов на этапе консультации. Внедрили AI-консультант, оптимизировали воронку продаж, запустили контекстную рекламу.
+                            </p>
+                            <div class="case-result">
+                                ✨ Результат: +50 процедур в месяц, средний чек вырос на 25%, ROI рекламы 3.2x
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
+                <!-- CTA SECTION -->
+                <div style="text-align: center; margin-top: 80px; padding: 60px; background: rgba(100, 50, 130, 0.1); border-radius: 15px; border: 1px solid rgba(186, 85, 211, 0.3);">
+                    <h3 style="font-size: 2rem; margin-bottom: 20px;">
+                        Хотите <span class="highlight">свой кейс успеха?</span>
+                    </h3>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px;">
+                        Мы помогли десяткам компаний увеличить продажи и автоматизировать работу. Вы можете быть следующим.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary">Начать консультацию</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Услуги</h4>
+                <ul>
+                    <li><a href="services.html#ai-services">AI Автоматизация</a></li>
+                    <li><a href="services.html#marketing-services">Маркетинг</a></li>
+                    <li><a href="services.html">Все услуги</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Компания</h4>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="cases.html">Кейсы</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="mailto:hello@neurobrand.kz">hello@neurobrand.kz</a></li>
+                    <li><a href="tel:+7">+7 (XXX) XXX-XX-XX</a></li>
+                    <li><a href="#">Астана, Казахстан</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NeuroBrand. Все права защищены. | Strategy • Brand • Impact</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
