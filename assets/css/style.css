@@ -530,8 +530,259 @@ footer {
 }
 
 /* ============================================
-   UTILITIES
+   ДЕМО ЧАТ-БОТ
    ============================================ */
+
+.demo-section {
+  margin: 100px 0;
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.chatbot-demo {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.chat-message {
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  animation: slide-in 0.3s ease;
+}
+
+.message-user {
+  background: rgba(167, 139, 250, 0.2);
+  color: var(--text);
+  align-self: flex-end;
+  max-width: 80%;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+.message-bot {
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--secondary);
+  align-self: flex-start;
+  max-width: 80%;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: rgba(167, 139, 250, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.chat-input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.chat-input input::placeholder {
+  color: var(--text-muted);
+}
+
+.chat-input button {
+  background: var(--primary);
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.chat-input button:hover {
+  background: var(--secondary);
+}
+
+/* ============================================
+   ВОРОНКА ПРОДАЖ
+   ============================================ */
+
+.funnel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.funnel-stage {
+  background: linear-gradient(90deg, rgba(167, 139, 250, 0.15), rgba(124, 58, 237, 0.1));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.funnel-stage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary), transparent);
+  opacity: 0;
+  width: var(--fill);
+  transition: opacity 0.3s ease;
+}
+
+.funnel-stage:hover::before {
+  opacity: 0.1;
+}
+
+.funnel-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.funnel-label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.funnel-count {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.funnel-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  width: var(--fill);
+  transition: width 0.3s ease;
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.testimonial {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.author-info h4 {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.author-info p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chatbot-demo {
+    height: 400px;
+  }
+}
 
 .accent {
   color: var(--secondary);
